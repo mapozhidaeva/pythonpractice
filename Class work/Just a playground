@@ -1,0 +1,6 @@
+word3 = input('Теперь последний шаг! Введите слово и я его необычно напечатаю: ')
+mid_word = len(word3) // 2
+print (word3[:mid_word] + word3[:mid_word - 1:-1])
+
+
+
