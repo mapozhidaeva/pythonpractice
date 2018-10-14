@@ -134,7 +134,6 @@ def travel_guide():
 
 
 def main():
-    print ()
     f = open('text.txt', 'a')
     f.write(travel_guide())
     f.close()
