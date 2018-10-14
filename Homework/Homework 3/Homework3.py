@@ -1,5 +1,12 @@
 import random
 
+
+# чтобы очистить список сгенерированных предложений
+filename = 'text.txt'
+
+with open(filename, 'w') as f:
+    f.write('')
+
 # Программа выдает рандомно либо туристическую справку, либо астрологический прогноз, либо статью по психологии в популярном женском журнале.
 
 def singular_nouns():
@@ -122,12 +129,15 @@ def imperative():
     return result
 
 def travel_guide():
-    return affirmative() + '\n' + condition() + ' ' + negation() + '\n' + question() + imperative() + '\n'
+    text = affirmative() + '\n' + condition() + ' ' + negation() + '\n' + question() + imperative() + '\n'
+    return text
 
 
 def main():
     print ()
-    print (travel_guide())
+    f = open('text.txt', 'a')
+    f.write(travel_guide())
+    f.close()
     return 0
 
 if __name__ == '__main__':
