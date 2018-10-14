@@ -1,6 +1,27 @@
-word3 = input('Теперь последний шаг! Введите слово и я его необычно напечатаю: ')
-mid_word = len(word3) // 2
-print (word3[:mid_word] + word3[:mid_word - 1:-1])
 
 
+# part 1
 
+w = input ('Введите слово кириллицей: ')
+for i in range(len(w)):
+    if  i % 2 != 0 and i!= 'к' and i!= 'а':
+        print (w[i])
+
+#part 2
+
+z = int(input('Введите целое число: '))
+for i in range(z):
+    w = input('Введите слово: ')
+    if w != 'программирование':
+        print(w)
+    else:
+        break
+#part 3
+
+print('Введите слово кириллицей: ')
+w = str(input())
+d = len(w) // 2
+f = w[0:d]
+h = w[:d-1:-1]
+u = f + h
+print (u)
