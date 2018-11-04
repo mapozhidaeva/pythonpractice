@@ -21,8 +21,6 @@ def adjectives():
     return random.choice(adjectives)
 
 
-place = 1
-
 def places():
     with open('places.tsv') as f:
         places = f.read().split('\n')
@@ -113,7 +111,7 @@ def negation():
     with open('adjectives.tsv') as f:
         adjectives = f.read().split('\n')
     global place
-    return 'But ' + singular_nouns() + ' don\'t ' + verbs_of_preference() + ' to ' + verbs_of_visit() + ' ' + places() + '.'
+    return 'But ' + singular_nouns() + 's don\'t ' + verbs_of_preference() + ' to ' + verbs_of_visit() + ' ' + places() + '.'
 
 def imperative():
     place = sightseeing_places()
@@ -135,7 +133,9 @@ def travel_guide():
 
 def main():
     f = open('text.txt', 'a')
-    f.write(travel_guide())
+    s = travel_guide()
+    print (s)
+    f.write(s)
     f.close()
     return 0
 
