@@ -122,7 +122,7 @@ the_output = '''
 
 print (the_output)
 def main():
-    f = open('text.txt', 'a')
+    f = open('text.txt', 'w')
     f.write(the_output)
     f.close()
     return 0
