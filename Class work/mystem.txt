@@ -1,0 +1,7 @@
+import os
+
+lst = os.listdir('dir')
+
+for fl in lst:
+    os.system('Downloads/mystem {} tag-{}-id'.formatformat((fl, fl))
+
